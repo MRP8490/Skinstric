@@ -131,12 +131,22 @@ export default function UploadPage() {
         <button
           type="button"
           onClick={openCamera}
-          className="relative h-[430px] w-[430px]"
+         className="relative h-[430px] w-[430px] transition-all duration-300 hover:scale-105"
         >
-          <div className="absolute inset-8 rotate-[8deg] border-2 border-dotted border-gray-300" />
-          <div className="absolute inset-14 -rotate-[14deg] border-2 border-dotted border-gray-300" />
-          <div className="absolute inset-20 rotate-[20deg] border-2 border-dotted border-gray-300" />
-
+ <div className="pointer-events-none absolute inset-0">
+  <div
+    className="absolute inset-8 animate-upload-square border border-dotted border-gray-400 opacity-40"
+    style={{ "--start-rotate": "8deg" } as React.CSSProperties}
+  />
+  <div
+    className="absolute inset-14 animate-upload-square border border-dotted border-gray-400 opacity-40"
+    style={{ "--start-rotate": "-14deg" } as React.CSSProperties}
+  />
+  <div
+    className="absolute inset-20 animate-upload-square border border-dotted border-gray-400 opacity-40"
+    style={{ "--start-rotate": "20deg" } as React.CSSProperties}
+  />
+</div>
           <div className="absolute left-1/2 top-1/2 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white">
             <div className="relative h-20 w-20 rounded-full border-[6px] border-black">
               <div className="absolute inset-0 m-auto h-8 w-8 rounded-full bg-black" />
@@ -156,11 +166,22 @@ export default function UploadPage() {
         <button
           type="button"
           onClick={() => fileInputRef.current?.click()}
-          className="relative h-[430px] w-[430px]"
+          className="relative h-[430px] w-[430px] transition-all duration-300 hover:scale-105"
         >
-          <div className="absolute inset-8 rotate-[8deg] border-2 border-dotted border-gray-300" />
-          <div className="absolute inset-14 -rotate-[14deg] border-2 border-dotted border-gray-300" />
-          <div className="absolute inset-20 rotate-[20deg] border-2 border-dotted border-gray-300" />
+   <div className="pointer-events-none absolute inset-0">
+  <div
+    className="absolute inset-8 animate-upload-square border border-dotted border-gray-400 opacity-40"
+    style={{ "--start-rotate": "8deg" } as React.CSSProperties}
+  />
+  <div
+    className="absolute inset-14 animate-upload-square border border-dotted border-gray-400 opacity-40"
+    style={{ "--start-rotate": "-14deg" } as React.CSSProperties}
+  />
+  <div
+    className="absolute inset-20 animate-upload-square border border-dotted border-gray-400 opacity-40"
+    style={{ "--start-rotate": "20deg" } as React.CSSProperties}
+  />
+</div>
 
           <div className="absolute left-1/2 top-1/2 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-black bg-white">
             <div className="relative h-20 w-20 overflow-hidden rounded-full border-[6px] border-black">

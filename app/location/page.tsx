@@ -49,6 +49,13 @@ export default function LocationPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Background Squares */}
+<div className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] animate-very-slow-spin">
+  <div className="absolute inset-0 rotate-[8deg] border border-dotted border-gray-400 opacity-50" />
+  <div className="absolute inset-0 rotate-[22deg] border border-dotted border-gray-400 opacity-50" />
+  <div className="absolute inset-0 rotate-[36deg] border border-dotted border-gray-400 opacity-50" />
+  <div className="absolute inset-0 rotate-[50deg] border border-dotted border-gray-400 opacity-50" />
+</div>
       <div className="p-8">
         <p className="text-sm font-bold">SKINSTRIC [ INTRO ]</p>
       </div>

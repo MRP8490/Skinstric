@@ -24,3 +24,52 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 18s linear infinite;
+}
+@keyframes slow-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-slow-spin-reverse {
+  animation: slow-spin-reverse 22s linear infinite;
+}
+@keyframes very-slow-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-very-slow-spin {
+  animation: very-slow-spin 35s linear infinite;
+}
+@keyframes spin-upload-square {
+  from {
+    transform: rotate(var(--start-rotate));
+  }
+  to {
+    transform: rotate(calc(var(--start-rotate) + 360deg));
+  }
+}
+
+.animate-upload-square {
+  animation: spin-upload-square 35s linear infinite;
+}

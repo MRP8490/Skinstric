@@ -24,7 +24,7 @@ export default function AnalysisPage() {
         <div className="relative mt-24 h-[500px] w-[500px]">
           <Link
             href="/demographics"
-            className="absolute left-1/2 top-0 flex h-[220px] w-[220px] -translate-x-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-200 hover:bg-gray-300"
+            className="absolute left-1/2 top-0 flex h-[220px] w-[220px] -translate-x-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-200 transition-all duration-300 hover:bg-gray-300 hover:scale-105"
           >
             <span className="-rotate-45 text-center text-lg font-bold">
               DEMOGRAPHICS
@@ -33,7 +33,7 @@ export default function AnalysisPage() {
 
           <Link
             href="/cosmetic-concerns"
-            className="absolute left-0 top-1/2 flex h-[220px] w-[220px] -translate-y-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-100 hover:bg-gray-200"
+            className="absolute left-0 top-1/2 flex h-[220px] w-[220px] -translate-y-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-100 transition-all duration-300 hover:bg-gray-200 hover:scale-105"
           >
             <span className="-rotate-45 text-center text-lg font-bold">
               COSMETIC
@@ -44,7 +44,7 @@ export default function AnalysisPage() {
 
           <Link
             href="/skin-type-details"
-            className="absolute right-0 top-1/2 flex h-[220px] w-[220px] -translate-y-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-100 hover:bg-gray-200"
+            className="absolute right-0 top-1/2 flex h-[220px] w-[220px] -translate-y-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-100 transition-all duration-300 hover:bg-gray-200 hover:scale-105"
           >
             <span className="-rotate-45 text-center text-lg font-bold">
               SKIN TYPE DETAILS
@@ -53,7 +53,7 @@ export default function AnalysisPage() {
 
           <Link
             href="/weather"
-            className="absolute bottom-0 left-1/2 flex h-[220px] w-[220px] -translate-x-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-100 hover:bg-gray-200"
+            className="absolute bottom-0 left-1/2 flex h-[220px] w-[220px] -translate-x-1/2 rotate-45 items-center justify-center border-[6px] border-white bg-gray-100 transition-all duration-300 hover:bg-gray-200 hover:scale-105"
           >
             <span className="-rotate-45 text-center text-lg font-bold">
               WEATHER
@@ -72,12 +72,15 @@ export default function AnalysisPage() {
         BACK
       </Link>
 
-      <button className="absolute bottom-10 right-8 flex items-center gap-4 font-bold">
+      <Link
+        href="/demographics"
+        className="absolute bottom-10 right-8 flex items-center gap-4 font-bold"
+      >
         GET SUMMARY
         <span className="flex h-14 w-14 rotate-45 items-center justify-center border border-black">
           <span className="-rotate-45">▶</span>
         </span>
-      </button>
+      </Link>
     </main>
   );
 }
