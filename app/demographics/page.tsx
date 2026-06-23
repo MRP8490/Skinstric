@@ -41,54 +41,72 @@ export default function DemographicsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white text-black">
-      <div className="p-8">
-        <p className="mb-5 text-sm font-bold">SKINSTRIC [ ANALYSIS ]</p>
+    <main className="min-h-screen overflow-hidden bg-white text-black">
+      <div className="px-4 pt-5 md:p-8">
+        <p className="mb-4 text-[8px] font-bold md:mb-5 md:text-sm">
+          SKINSTRIC [ ANALYSIS ]
+        </p>
 
-        <h1 className="text-[96px] font-light leading-none tracking-tight">
+        <h1 className="text-[42px] font-light leading-none tracking-tight md:text-[96px]">
           DEMOGRAPHICS
         </h1>
 
-        <p className="mt-4 text-lg tracking-wide">PREDICTED RACE & AGE</p>
+        <p className="mt-2 text-[10px] tracking-wide md:mt-4 md:text-lg">
+          PREDICTED RACE & AGE
+        </p>
       </div>
 
-      <div className="mt-8 flex gap-3 px-6">
-        <div className="w-[165px] shrink-0">
-          <div className="mb-2 bg-black px-5 py-6 text-white">
-            <p className="text-3xl font-semibold capitalize">{race}</p>
-            <p className="mt-1 text-xs tracking-[0.2em]">RACE</p>
+      <div className="mt-6 flex flex-col gap-3 px-4 pb-8 md:mt-8 md:flex-row md:px-6">
+        <div className="grid grid-cols-3 gap-2 md:block md:w-[165px] md:shrink-0">
+          <div className="bg-black px-3 py-4 text-white md:mb-2 md:px-5 md:py-6">
+            <p className="text-sm font-semibold capitalize md:text-3xl">
+              {race}
+            </p>
+            <p className="mt-1 text-[8px] tracking-[0.2em] md:text-xs">
+              RACE
+            </p>
           </div>
 
-          <div className="mb-2 border border-black px-5 py-6">
-            <p className="text-3xl font-semibold">{age}</p>
-            <p className="mt-1 text-xs tracking-[0.2em]">AGE</p>
+          <div className="border border-black px-3 py-4 md:mb-2 md:px-5 md:py-6">
+            <p className="text-sm font-semibold md:text-3xl">{age}</p>
+            <p className="mt-1 text-[8px] tracking-[0.2em] md:text-xs">
+              AGE
+            </p>
           </div>
 
-          <div className="border border-black px-5 py-6">
-            <p className="text-3xl font-semibold uppercase">{gender}</p>
-            <p className="mt-1 text-xs tracking-[0.2em]">SEX</p>
+          <div className="border border-black px-3 py-4 md:px-5 md:py-6">
+            <p className="text-sm font-semibold uppercase md:text-3xl">
+              {gender}
+            </p>
+            <p className="mt-1 text-[8px] tracking-[0.2em] md:text-xs">
+              SEX
+            </p>
           </div>
         </div>
 
-        <div className="flex h-[560px] flex-1 items-center justify-center border border-black bg-[#f7f7f7]">
+        <div className="flex h-[220px] items-center justify-center border border-black bg-[#f7f7f7] md:h-[560px] md:flex-1">
           <div className="text-center">
-            <div className="mb-4 text-[150px] font-light leading-none">
+            <div className="mb-2 text-[54px] font-light leading-none md:mb-4 md:text-[150px]">
               {confidence}%
             </div>
 
-            <p className="text-4xl font-light capitalize tracking-wide">
+            <p className="text-lg font-light capitalize tracking-wide md:text-4xl">
               {race}
             </p>
           </div>
         </div>
 
-        <div className="w-[420px] border border-black">
-          <div className="flex justify-between border-b border-black p-4 font-semibold">
-            <span className="text-xs tracking-[0.2em]">RACE</span>
-            <span className="text-xs tracking-[0.2em]">A.I. CONFIDENCE</span>
+        <div className="w-full border border-black md:w-[420px]">
+          <div className="flex justify-between border-b border-black p-3 font-semibold md:p-4">
+            <span className="text-[8px] tracking-[0.2em] md:text-xs">
+              RACE
+            </span>
+            <span className="text-[8px] tracking-[0.2em] md:text-xs">
+              A.I. CONFIDENCE
+            </span>
           </div>
 
-          {raceList.map(([name, score], index) => (
+          {raceList.map(([name, score]) => (
             <button
               key={name}
               type="button"
@@ -96,7 +114,7 @@ export default function DemographicsPage() {
                 setRace(name);
                 setConfidence((Number(score) * 100).toFixed(2));
               }}
-              className={`flex w-full justify-between px-4 py-5 text-left transition ${
+              className={`flex w-full justify-between px-3 py-3 text-left text-[11px] transition md:px-4 md:py-5 md:text-base ${
                 race === name
                   ? "bg-black text-white"
                   : "bg-white text-black hover:bg-gray-100"
