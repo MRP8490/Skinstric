@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState } from "react";
 import Link from "next/link";
 
@@ -137,77 +138,35 @@ export default function UploadPage() {
         className="hidden"
       />
 
-      <section className="flex min-h-screen flex-col items-center justify-center gap-2 pt-24 md:flex-row md:gap-[260px] md:pt-0">
+      <section className="flex min-h-screen flex-col items-center justify-center gap-2 pt-24 md:flex-row md:gap-[120px] md:pt-0">
         <button
           type="button"
           onClick={openCamera}
-          className="relative h-[210px] w-[210px] transition-all duration-300 hover:scale-105 md:h-[430px] md:w-[430px]"
+          className="relative h-[260px] w-[280px] transition-all duration-300 hover:scale-105 md:h-[484px] md:w-[521px]"
         >
-          <div className="pointer-events-none absolute inset-0">
-            <div
-              className="absolute inset-6 animate-upload-square border border-dotted border-gray-400 opacity-40 md:inset-8"
-              style={{ "--start-rotate": "8deg" } as React.CSSProperties}
-            />
-            <div
-              className="absolute inset-10 animate-upload-square border border-dotted border-gray-400 opacity-40 md:inset-14"
-              style={{ "--start-rotate": "-14deg" } as React.CSSProperties}
-            />
-            <div
-              className="absolute inset-14 animate-upload-square border border-dotted border-gray-400 opacity-40 md:inset-20"
-              style={{ "--start-rotate": "20deg" } as React.CSSProperties}
-            />
-          </div>
-
-          <div className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-black bg-white md:h-36 md:w-36 md:border-2">
-            <div className="relative h-11 w-11 rounded-full border-[4px] border-black md:h-20 md:w-20 md:border-[6px]">
-              <div className="absolute inset-0 m-auto h-5 w-5 rounded-full bg-black md:h-8 md:w-8" />
-              <div className="absolute bottom-0 left-0 h-6 w-6 bg-black [clip-path:polygon(0_100%,100%_0,100%_100%)] md:h-10 md:w-10" />
-            </div>
-          </div>
-
-          <div className="absolute left-[128px] top-[76px] h-px w-14 rotate-[-40deg] bg-black md:left-[250px] md:top-[150px] md:w-28" />
-
-          <p className="absolute left-[148px] top-[55px] text-left text-[9px] md:left-[300px] md:top-[110px] md:text-xl">
-            ALLOW A.I.
-            <br />
-            TO SCAN YOUR FACE
-          </p>
+          <Image
+            src="/camera.svg"
+            alt="Camera upload"
+            width={521}
+            height={484}
+            className="h-full w-full object-contain"
+            priority
+          />
         </button>
 
         <button
           type="button"
           onClick={() => fileInputRef.current?.click()}
-          className="relative h-[210px] w-[210px] transition-all duration-300 hover:scale-105 md:h-[430px] md:w-[430px]"
+          className="relative h-[260px] w-[280px] transition-all duration-300 hover:scale-105 md:h-[484px] md:w-[489px]"
         >
-          <div className="pointer-events-none absolute inset-0">
-            <div
-              className="absolute inset-6 animate-upload-square border border-dotted border-gray-400 opacity-40 md:inset-8"
-              style={{ "--start-rotate": "8deg" } as React.CSSProperties}
-            />
-            <div
-              className="absolute inset-10 animate-upload-square border border-dotted border-gray-400 opacity-40 md:inset-14"
-              style={{ "--start-rotate": "-14deg" } as React.CSSProperties}
-            />
-            <div
-              className="absolute inset-14 animate-upload-square border border-dotted border-gray-400 opacity-40 md:inset-20"
-              style={{ "--start-rotate": "20deg" } as React.CSSProperties}
-            />
-          </div>
-
-          <div className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-black bg-white md:h-36 md:w-36 md:border-2">
-            <div className="relative h-11 w-11 overflow-hidden rounded-full border-[4px] border-black md:h-20 md:w-20 md:border-[6px]">
-              <div className="absolute right-2 top-2 h-3 w-3 rounded-full bg-black md:right-3 md:top-3 md:h-5 md:w-5" />
-              <div className="absolute bottom-0 left-0 h-6 w-full rounded-t-[50%] bg-black md:h-10" />
-            </div>
-          </div>
-
-          <div className="absolute left-[58px] top-[135px] h-px w-14 rotate-[-40deg] bg-black md:left-[90px] md:top-[260px] md:w-28" />
-
-          <p className="absolute left-[5px] top-[148px] text-right text-[9px] md:left-0 md:top-[285px] md:text-xl">
-            ALLOW A.I.
-            <br />
-            ACCESS GALLERY
-          </p>
+          <Image
+            src="/gallery.svg"
+            alt="Gallery upload"
+            width={489}
+            height={484}
+            className="h-full w-full object-contain"
+            priority
+          />
         </button>
       </section>
 
