@@ -1,4 +1,25 @@
-# Skinstric
+<h1 align="center">Skinstric</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+</p>
+
+<p align="center">
+  <img
+    src="./public/skinstric-preview.png"
+    alt="Skinstric application preview"
+    width="100%"
+  />
+</p>
+
+<p align="center">
+  <strong>
+    AI-powered skincare analysis experience built with Next.js, React, and TypeScript.
+  </strong>
+</p>
 
 Skinstric is a multi-page AI skincare analysis experience built with Next.js, React, and TypeScript. The application guides users through entering their personal information, uploading or capturing an image, and viewing an interactive demographic analysis.
 
