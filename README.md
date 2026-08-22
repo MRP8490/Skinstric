@@ -40,6 +40,19 @@ Users can:
 - Navigate through analysis and demographic pages
 - View predicted demographic results
 - Move backward and forward through the full application flow
+ ## My Contributions
+This project was developed from a provided design reference. I implemented the frontend application and user flow, including:
+- Built the multi-page experience using Next.js and React
+- Implemented the application using TypeScript
+- Created responsive layouts for desktop, tablet, and mobile devices
+- Built name and location input validation
+- Integrated the API request flow for submitting user information
+- Implemented image upload and device camera functionality
+- Added image preview and retake functionality
+- Built loading and error states
+- Used Local Storage to preserve user information
+- Implemented the demographic analysis experience
+- Added reusable UI patterns and navigation controls
 
 ## Features
 
@@ -56,7 +69,7 @@ Users can:
 - Animated interface elements
 - Accessible navigation controls
 - Reusable visual patterns across pages
-
+- 
 ## Tech Stack
 
 - Next.js
