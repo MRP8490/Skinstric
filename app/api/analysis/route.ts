@@ -1,8 +1,15 @@
 import { NextResponse } from "next/server";
+import type {
+  AnalysisRequest,
+  AnalysisResponse,
+} from "@/types/analysis";
+
+
+
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+   const body: AnalysisRequest = await request.json();
 
     const response = await fetch(
       "https://us-central1-frontend-simplified.cloudfunctions.net/skinstricPhaseTwo",
@@ -15,7 +22,7 @@ export async function POST(request: Request) {
       }
     );
 
-    const data = await response.json();
+    const data: AnalysisResponse = await response.json();
 
     return NextResponse.json(data);
   } catch (error) {

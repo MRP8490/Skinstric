@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { AnalysisResponse } from "@/types/analysis";
 
 type ScoreItem = [string, number];
 type Category = "race" | "age" | "gender";
@@ -21,7 +22,7 @@ export default function DemographicsPage() {
     const saved = localStorage.getItem("skinstric-analysis");
     if (!saved) return;
 
-    const parsed = JSON.parse(saved);
+    const parsed: AnalysisResponse = JSON.parse(saved);
 
     const sortedRace = Object.entries(parsed.data.race).sort(
       (a, b) => Number(b[1]) - Number(a[1])

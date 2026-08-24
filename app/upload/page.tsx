@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import Link from "next/link";
+import type { AnalysisResponse } from "@/types/analysis";
 
 export default function UploadPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -22,7 +23,7 @@ export default function UploadPage() {
       body: JSON.stringify({ image }),
     });
 
-    const data = await response.json();
+    const data: AnalysisResponse = await response.json();
     localStorage.setItem("skinstric-analysis", JSON.stringify(data));
     window.location.href = "/loading";
   }
