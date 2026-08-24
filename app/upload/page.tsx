@@ -141,6 +141,7 @@ export default function UploadPage() {
       <section className="flex min-h-screen flex-col items-center justify-center gap-2 pt-24 md:flex-row md:gap-[120px] md:pt-0">
         <button
           type="button"
+          aria-label="Take a photo with camera"
           onClick={openCamera}
           className="relative h-[260px] w-[280px] transition-all duration-300 hover:scale-105 md:h-[484px] md:w-[521px]"
         >
@@ -156,6 +157,7 @@ export default function UploadPage() {
 
         <button
           type="button"
+          aria-label="Upload from gallery"
           onClick={() => fileInputRef.current?.click()}
           className="relative h-[260px] w-[280px] transition-all duration-300 hover:scale-105 md:h-[484px] md:w-[489px]"
         >
@@ -174,7 +176,9 @@ export default function UploadPage() {
         href="/thank-you"
         className="absolute bottom-8 left-8 z-20 flex items-center gap-3 text-[9px] font-bold md:bottom-10 md:gap-4 md:text-base"
       >
-        <span className="flex h-10 w-10 rotate-45 items-center justify-center border border-black md:h-16 md:w-16">
+        <span 
+        aria-hidden="true"
+        className="flex h-10 w-10 rotate-45 items-center justify-center border border-black md:h-16 md:w-16">
           <span className="-rotate-45">◀</span>
         </span>
         BACK
@@ -215,7 +219,9 @@ export default function UploadPage() {
                 className="absolute right-4 top-1/2 flex items-center gap-3 text-[10px] font-bold text-white md:right-10 md:gap-4 md:text-sm"
               >
                 TAKE PICTURE
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white text-2xl md:h-16 md:w-16 md:text-3xl">
+                <span 
+                aria-hidden="true"
+                className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white text-2xl md:h-16 md:w-16 md:text-3xl">
                   📷
                 </span>
               </button>

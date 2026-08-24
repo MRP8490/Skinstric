@@ -81,6 +81,7 @@ export default function LocationPage() {
 
           <input
             type="text"
+              aria-label="Your city"
             value={location}
             onChange={(event) => {
               setLocation(event.target.value);
@@ -102,9 +103,12 @@ export default function LocationPage() {
         onClick={() => router.push("/intro")}
         className="absolute bottom-8 left-8 z-20 flex items-center gap-3 text-[9px] font-bold md:bottom-10 md:left-8 md:gap-4 md:text-base"
       >
-        <span className="flex h-10 w-10 rotate-45 items-center justify-center border border-black md:h-16 md:w-16">
-          <span className="-rotate-45">◀</span>
-        </span>
+       <span
+  aria-hidden="true"
+  className="flex h-10 w-10 rotate-45 items-center justify-center border border-black md:h-16 md:w-16"
+>
+  <span className="-rotate-45">◀</span>
+</span>
         BACK
       </button>
     </main>

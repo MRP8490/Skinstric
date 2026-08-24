@@ -11,7 +11,7 @@
   <img
     src="./public/skinstric-preview.png"
     alt="Skinstric application preview"
-    width="100%"
+    width="850"
   />
 </p>
 

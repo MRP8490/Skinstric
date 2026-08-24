@@ -84,32 +84,35 @@ export default function DemographicsPage() {
 
       <div className="mt-8 flex flex-col gap-3 px-4 pb-24 md:mt-20 md:flex-row md:px-6">
         <div className="grid grid-cols-3 gap-2 md:block md:w-[220px]">
-          <button
-            onClick={() => selectCategory("race")}
-            className={`w-full border border-black p-3 text-left md:mb-3 md:p-6 ${
-              active === "race" ? "bg-black text-white" : "bg-white"
-            }`}
-          >
+        <button
+  type="button"
+  onClick={() => selectCategory("race")}
+  className={`w-full border border-black p-3 text-left md:mb-3 md:p-6 ${
+    active === "race" ? "bg-black text-white" : "bg-white"
+  }`}
+>
             <p className="text-sm font-bold capitalize md:text-2xl">{race}</p>
             <p className="mt-2 text-[8px] tracking-widest md:text-xs">RACE</p>
           </button>
 
-          <button
-            onClick={() => selectCategory("age")}
-            className={`w-full border border-black p-3 text-left md:mb-3 md:p-6 ${
-              active === "age" ? "bg-black text-white" : "bg-white"
-            }`}
-          >
+       <button
+  type="button"
+  onClick={() => selectCategory("age")}
+  className={`w-full border border-black p-3 text-left md:mb-3 md:p-6 ${
+    active === "age" ? "bg-black text-white" : "bg-white"
+  }`}
+>
             <p className="text-sm font-bold md:text-2xl">{age}</p>
             <p className="mt-2 text-[8px] tracking-widest md:text-xs">AGE</p>
           </button>
 
-          <button
-            onClick={() => selectCategory("gender")}
-            className={`w-full border border-black p-3 text-left md:p-6 ${
-              active === "gender" ? "bg-black text-white" : "bg-white"
-            }`}
-          >
+       <button
+  type="button"
+  onClick={() => selectCategory("gender")}
+  className={`w-full border border-black p-3 text-left md:p-6 ${
+    active === "gender" ? "bg-black text-white" : "bg-white"
+  }`}
+>
             <p className="text-sm font-bold uppercase md:text-2xl">{gender}</p>
             <p className="mt-2 text-[8px] tracking-widest md:text-xs">SEX</p>
           </button>
@@ -142,6 +145,7 @@ export default function DemographicsPage() {
 
             return (
               <button
+               type="button"
                 key={name}
                 onClick={() => selectValue(name, score)}
                 className={`flex w-full justify-between px-4 py-4 text-left text-sm md:py-5 md:text-base ${

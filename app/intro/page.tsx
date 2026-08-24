@@ -35,9 +35,12 @@ export default function IntroPage() {
           SKINSTRIC <span className="text-gray-400">[ INTRO ]</span>
         </p>
 
-        <button className="bg-black px-3 py-2 text-[7px] text-white md:px-5 md:py-3 md:text-xs">
-          ENTER CODE
-        </button>
+       <button
+  type="button"
+  className="bg-black px-3 py-2 text-[7px] text-white md:px-5 md:py-3 md:text-xs"
+>
+  ENTER CODE
+</button>
       </header>
 
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[300px] animate-very-slow-spin md:h-[520px] md:w-[520px]">
@@ -61,6 +64,7 @@ export default function IntroPage() {
 
           <input
             type="text"
+             aria-label="Your name"
             value={name}
             onChange={(event) => {
               setName(event.target.value);
@@ -82,9 +86,12 @@ export default function IntroPage() {
         onClick={() => router.push("/")}
         className="absolute bottom-8 left-8 z-20 flex items-center gap-3 text-[9px] font-bold md:bottom-10 md:left-8 md:gap-4 md:text-base"
       >
-        <span className="flex h-10 w-10 rotate-45 items-center justify-center border border-black md:h-16 md:w-16">
-          <span className="-rotate-45">◀</span>
-        </span>
+     <span
+  aria-hidden="true"
+  className="flex h-10 w-10 rotate-45 items-center justify-center border border-black md:h-16 md:w-16"
+>
+  <span className="-rotate-45">◀</span>
+</span>
         BACK
       </button>
     </main>
